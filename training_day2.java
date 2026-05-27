@@ -114,3 +114,55 @@
 //         }
 //     }
 // }
+
+
+
+
+// import java.util.*;
+// class Main{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         for(int i=1; i<=n; i++){
+//             int start=i;
+//             int step=n-1;
+            
+//             for(int j=1; j<=i; j++){
+//                 System.out.print(start+" ");
+//                 start+=step;
+//                 step-=1;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//     Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int num = 1;
+
+//         for (int i = 1; i <= n; i++) {
+//             int start = num + i - 1;
+//             for (int j = 1; j <= i; j++) {
+//                 if (i % 2 == 0) {
+//                     System.out.print(start-- + " ");
+//                 } else {
+//                     System.out.print(num++ + " ");
+//                 }
+//             }
+
+//             if (i % 2 == 0) {
+//                 num = start + i + 1;
+//             }
+
+//             System.out.println();
+//         }
+//     }
+// }
