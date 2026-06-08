@@ -30,7 +30,7 @@ class training_day10{
         int c=sc.nextInt();
         float total=(float)(a+b+c);
         // float tot=300.0;
-        float ans=total/300;
+        float ans=total/300t;
         float cgpa=ans*10;
         
         System.out.printf("%.2f", cgpa);
