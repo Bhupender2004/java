@@ -117,20 +117,40 @@
 
 
 
+// print first and last character of string
+// import java.util.*;
+
+// public class cst {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String s = sc.nextLine();
+//         String upp=s.toUpperCase();
+//         char[] arr=upp.toCharArray();
+//         for(int i=0; i<s.length(); i++){
+//             System.out.print(arr[0]+"."+arr[s.length()-1]);
+//             break;
+//         }
+//     }
+// }
 
 
+// Cup cake sales
+// import java.util.*;
+// public class cst {
+//     public static void main(String[] args) {
 
-import java.util.*;
-
-public class cst {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String upp=s.toUpperCase();
-        char[] arr=upp.toCharArray();
-        for(int i=0; i<s.length(); i++){
-            System.out.print(arr[0]+"."+arr[s.length()-1]);
-            break;
-        }
-    }
-}
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int arr[]=new int[n];
+//         for(int i=0; i<n; i++){
+//             arr[i]=sc.nextInt();
+//         }
+//         int sum=0;
+//         for(int i=0;i<n; i++){
+//             if(arr[i]>=5){
+//                 sum+=arr[i];
+//             }
+//         }
+//         System.out.println(sum);
+//     }
+// }
