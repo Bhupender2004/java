@@ -157,21 +157,49 @@
 
 
 
-import java.util.*;
-public class cst {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextLong()) {
-            long n = sc.nextLong();
-            long m = sc.nextLong();
-            long k = sc.nextLong();
-            if ((2 * n * m) % k == 0) {
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
-            }
-        }
+//
+
+// import java.util.*;
+// public class cst {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         if (sc.hasNextLong()) {
+//             long n = sc.nextLong();
+//             long m = sc.nextLong();
+//             long k = sc.nextLong();
+//             if ((2 * n * m) % k == 0) {
+//                 System.out.println("YES");
+//             } else {
+//                 System.out.println("NO");
+//             }
+//         }
         
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
+
+
+
+// consecutive character
+// import java.util.*;
+// public class cst{
+//     public static void main(String[] args) throws Exception {
+//         Scanner sc = new Scanner(System.in);
+//         if (!sc.hasNext()) return;
+//         String s = sc.next();
+        
+//         int totalEvenSum = 0;
+//         int n = s.length();
+//         for (int i = 0; i < n; i++) {
+//             int count = 1;
+//             while (i + 1 < n && s.charAt(i) == s.charAt(i + 1)) {
+//                 count++;
+//                 i++;
+//             }
+//             if (count % 2 == 0) {
+//                 totalEvenSum += count;
+//             }
+//         }
+//         System.out.println(totalEvenSum);
+//     }
+// }
