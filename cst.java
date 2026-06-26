@@ -154,3 +154,24 @@
 //         System.out.println(sum);
 //     }
 // }
+
+
+
+import java.util.*;
+public class cst {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextLong()) {
+            long n = sc.nextLong();
+            long m = sc.nextLong();
+            long k = sc.nextLong();
+            if ((2 * n * m) % k == 0) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+        sc.close();
+    }
+}
