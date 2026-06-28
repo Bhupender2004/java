@@ -238,3 +238,47 @@
 //         System.out.println(maxLen);
 //     }
 // }
+
+
+
+// Maximum possible numbers
+
+
+
+import java.util.*;
+
+public class cst{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String numStr = sc.next();
+        
+        int[] digits = new int[10];
+        for (int i = 0; i < 10; i++) {
+            digits[i] = sc.nextInt();
+        }
+        
+        char[] numArr = numStr.toCharArray();
+        boolean replaced = false;
+        
+        for (int i = 0; i < numArr.length; i++) {
+            int currentDigit = numArr[i] - '0';
+            
+            if (!replaced) {
+                if (digits[currentDigit] > currentDigit) {
+                    numArr[i] = (char) (digits[currentDigit] + '0');
+                    replaced = true;
+                }
+            } else {
+                if (digits[currentDigit] >= currentDigit) {
+                    numArr[i] = (char) (digits[currentDigit] + '0');
+                } else {
+                    // Stop replacing once the condition fails
+                    break;
+                }
+            }
+        }
+        
+        System.out.println(new String(numArr));
+    }
+}
+
