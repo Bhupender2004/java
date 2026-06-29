@@ -243,42 +243,85 @@
 
 // Maximum possible numbers
 
+// import java.util.*;
+
+// public class cst{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String numStr = sc.next();
+        
+//         int[] digits = new int[10];
+//         for (int i = 0; i < 10; i++) {
+//             digits[i] = sc.nextInt();
+//         }
+        
+//         char[] numArr = numStr.toCharArray();
+//         boolean replaced = false;
+        
+//         for (int i = 0; i < numArr.length; i++) {
+//             int currentDigit = numArr[i] - '0';
+            
+//             if (!replaced) {
+//                 if (digits[currentDigit] > currentDigit) {
+//                     numArr[i] = (char) (digits[currentDigit] + '0');
+//                     replaced = true;
+//                 }
+//             } else {
+//                 if (digits[currentDigit] >= currentDigit) {
+//                     numArr[i] = (char) (digits[currentDigit] + '0');
+//                 } else {
+//                     // Stop replacing once the condition fails
+//                     break;
+//                 }
+//             }
+//         }
+        
+//         System.out.println(new String(numArr));
+//     }
+// }
 
 
+// Jack Game 
 import java.util.*;
 
-public class cst{
+public class cst {
+    public static long gcd(long a, long b) {
+        while (b != 0) {
+            long temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    public static long lcm(long a, long b) {
+        if (a == 0 || b == 0) return 0;
+        return Math.abs(a * b) / gcd(a, b);
+    }    
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String numStr = sc.next();
-        
-        int[] digits = new int[10];
-        for (int i = 0; i < 10; i++) {
-            digits[i] = sc.nextInt();
+        if (!sc.hasNextInt()) return;
+        int n = sc.nextInt();
+        int[] arr = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            arr[i] = sc.nextInt();
         }
-        
-        char[] numArr = numStr.toCharArray();
-        boolean replaced = false;
-        
-        for (int i = 0; i < numArr.length; i++) {
-            int currentDigit = numArr[i] - '0';
-            
-            if (!replaced) {
-                if (digits[currentDigit] > currentDigit) {
-                    numArr[i] = (char) (digits[currentDigit] + '0');
-                    replaced = true;
+        boolean[] visited = new boolean[n + 1];
+        long ans = 1;
+        for (int i = 1; i <= n; i++) {
+            if (!visited[i]) {
+                int count = 0;
+                int curr = i;
+                
+                while (!visited[curr]) {
+                    visited[curr] = true;
+                    curr = arr[curr];
+                    count++;
                 }
-            } else {
-                if (digits[currentDigit] >= currentDigit) {
-                    numArr[i] = (char) (digits[currentDigit] + '0');
-                } else {
-                    // Stop replacing once the condition fails
-                    break;
-                }
+                ans = lcm(ans, count);
             }
         }
-        
-        System.out.println(new String(numArr));
+        System.out.println(ans);
+        sc.close();
     }
 }
-
