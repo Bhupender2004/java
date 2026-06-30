@@ -282,46 +282,64 @@
 
 
 // Jack Game 
-import java.util.*;
+// import java.util.*;
 
-public class cst {
-    public static long gcd(long a, long b) {
-        while (b != 0) {
-            long temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
-    public static long lcm(long a, long b) {
-        if (a == 0 || b == 0) return 0;
-        return Math.abs(a * b) / gcd(a, b);
-    }    
+// public class cst {
+//     public static long gcd(long a, long b) {
+//         while (b != 0) {
+//             long temp = b;
+//             b = a % b;
+//             a = temp;
+//         }
+//         return a;
+//     }
+//     public static long lcm(long a, long b) {
+//         if (a == 0 || b == 0) return 0;
+//         return Math.abs(a * b) / gcd(a, b);
+//     }    
     
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        if (!sc.hasNextInt()) return;
-        int n = sc.nextInt();
-        int[] arr = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            arr[i] = sc.nextInt();
-        }
-        boolean[] visited = new boolean[n + 1];
-        long ans = 1;
-        for (int i = 1; i <= n; i++) {
-            if (!visited[i]) {
-                int count = 0;
-                int curr = i;
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         if (!sc.hasNextInt()) return;
+//         int n = sc.nextInt();
+//         int[] arr = new int[n + 1];
+//         for (int i = 1; i <= n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+//         boolean[] visited = new boolean[n + 1];
+//         long ans = 1;
+//         for (int i = 1; i <= n; i++) {
+//             if (!visited[i]) {
+//                 int count = 0;
+//                 int curr = i;
                 
-                while (!visited[curr]) {
-                    visited[curr] = true;
-                    curr = arr[curr];
-                    count++;
-                }
-                ans = lcm(ans, count);
+//                 while (!visited[curr]) {
+//                     visited[curr] = true;
+//                     curr = arr[curr];
+//                     count++;
+//                 }
+//                 ans = lcm(ans, count);
+//             }
+//         }
+//         System.out.println(ans);
+//         sc.close();
+//     }
+// }
+
+
+
+// contains duplicate
+
+import java.util.*;
+class cst{
+    public boolean containsDupli(int [] nums){
+        HashSet<Integer> set=new HashSet<>();
+        for(int num:nums){
+            if(set.contains(num)){
+                return true;
             }
+            set.add(num);
         }
-        System.out.println(ans);
-        sc.close();
+        return false;
     }
 }
