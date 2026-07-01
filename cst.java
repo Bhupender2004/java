@@ -330,16 +330,35 @@
 
 // contains duplicate
 
+// import java.util.*;
+// class cst{
+//     public boolean containsDupli(int [] nums){
+//         HashSet<Integer> set=new HashSet<>();
+//         for(int num:nums){
+//             if(set.contains(num)){
+//                 return true;
+//             }
+//             set.add(num);
+//         }
+//         return false;
+//     }
+// }
+
+
+// Group Anagram
+
 import java.util.*;
-class cst{
-    public boolean containsDupli(int [] nums){
-        HashSet<Integer> set=new HashSet<>();
-        for(int num:nums){
-            if(set.contains(num)){
-                return true;
-            }
-            set.add(num);
+class cst {
+    public boolean isAnagram(String s, String t) {
+        if(s.length()!=t.length()){
+            return false;
         }
-        return false;
+        char [] sSort = s.toCharArray();
+        char [] tSort = t.toCharArray();
+
+        Arrays.sort(sSort);
+        Arrays.sort(tSort);
+
+        return Arrays.equals(sSort, tSort);
     }
 }
