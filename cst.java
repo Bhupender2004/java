@@ -345,20 +345,40 @@
 // }
 
 
+// Valid Anagram
+
+// import java.util.*;
+// class cst {
+//     public boolean isAnagram(String s, String t) {
+//         if(s.length()!=t.length()){
+//             return false;
+//         }
+//         char [] sSort = s.toCharArray();
+//         char [] tSort = t.toCharArray();
+
+//         Arrays.sort(sSort);
+//         Arrays.sort(tSort);
+
+//         return Arrays.equals(sSort, tSort);
+//     }
+// }
+
+
+
 // Group Anagram
 
 import java.util.*;
 class cst {
-    public boolean isAnagram(String s, String t) {
-        if(s.length()!=t.length()){
-            return false;
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String, List<String>> res= new HashMap<>();
+        for(String s: strs){
+            char [] charArray=s.toCharArray();
+            Arrays.sort(charArray);
+            String sortedS=new String(charArray);
+            res.putIfAbsent(sortedS, new ArrayList<>());
+            res.get(sortedS).add(s);
         }
-        char [] sSort = s.toCharArray();
-        char [] tSort = t.toCharArray();
-
-        Arrays.sort(sSort);
-        Arrays.sort(tSort);
-
-        return Arrays.equals(sSort, tSort);
+        return new ArrayList<>(res.values());
     }
 }
+
