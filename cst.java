@@ -384,22 +384,44 @@
 
 
 // Top K-frequent elements
-import java.util.*;
-class cst {
-    public int[] topKFrequent(int[] nums, int k) {
-        HashMap<Integer, Integer> count=new HashMap<>();
-        for(int num:nums){
-            count.put(num, count.getOrDefault(num,0)+1);
+// import java.util.*;
+// class cst {
+//     public int[] topKFrequent(int[] nums, int k) {
+//         HashMap<Integer, Integer> count=new HashMap<>();
+//         for(int num:nums){
+//             count.put(num, count.getOrDefault(num,0)+1);
+//         }
+//         ArrayList<int[]> arr = new ArrayList<>();
+//         for(Map.Entry<Integer, Integer> entry:count.entrySet()){
+//             arr.add(new int[]{entry.getValue(), entry.getKey()});
+//         }
+//         arr.sort((a,b)->b[0]-a[0]);
+//         int [] res = new int[k];
+//         for(int i=0;i<k;i++){
+//             res[i]=arr.get(i)[1];
+//         }
+//         return res;
+//     }
+// }
+
+
+
+// Product of array except itself
+// import java.util.*;
+class cst{
+    public int[] productExceptself(int [] nums){
+        int n=nums.length;
+        int res[]=new int[n];
+        res[0]=1;
+        for(int i=1; i<n;i++){
+            res[i]=res[i-1]*nums[i-1];
         }
-        ArrayList<int[]> arr = new ArrayList<>();
-        for(Map.Entry<Integer, Integer> entry:count.entrySet()){
-            arr.add(new int[]{entry.getValue(), entry.getKey()});
-        }
-        arr.sort((a,b)->b[0]-a[0]);
-        int [] res = new int[k];
-        for(int i=0;i<k;i++){
-            res[i]=arr.get(i)[1];
+        int prod=1;
+        for(int i=n-1; i>=0; i--){
+            res[i]*=prod;
+            prod*=nums[i];
         }
         return res;
     }
 }
+
