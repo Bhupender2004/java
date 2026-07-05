@@ -408,20 +408,67 @@
 
 // Product of array except itself
 // import java.util.*;
-class cst{
-    public int[] productExceptself(int [] nums){
-        int n=nums.length;
-        int res[]=new int[n];
-        res[0]=1;
-        for(int i=1; i<n;i++){
-            res[i]=res[i-1]*nums[i-1];
+// class cst{
+//     public int[] productExceptself(int [] nums){
+//         int n=nums.length;
+//         int res[]=new int[n];
+//         res[0]=1;
+//         for(int i=1; i<n;i++){
+//             res[i]=res[i-1]*nums[i-1];
+//         }
+//         int prod=1;
+//         for(int i=n-1; i>=0; i--){
+//             res[i]*=prod;
+//             prod*=nums[i];
+//         }
+//         return res;
+//     }
+// }
+
+
+
+// Move zeros
+
+import java.util.*;
+
+public class cst {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input size of array
+        System.out.print("Enter the size of array: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Input array elements
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-        int prod=1;
-        for(int i=n-1; i>=0; i--){
-            res[i]*=prod;
-            prod*=nums[i];
+
+        // Move non-zero elements to the front
+        int index = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                arr[index] = arr[i];
+                index++;
+            }
         }
-        return res;
+
+        // Fill remaining positions with zeros
+        while (index < n) {
+            arr[index] = 0;
+            index++;
+        }
+
+        // Display result
+        System.out.println("Array after moving zeros to the end:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
     }
 }
-
