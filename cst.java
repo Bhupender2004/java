@@ -429,46 +429,46 @@
 
 // Move zeros
 
-import java.util.*;
+// import java.util.*;
 
-public class cst {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+// public class cst {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
 
-        // Input size of array
-        System.out.print("Enter the size of array: ");
-        int n = sc.nextInt();
+//         // Input size of array
+//         System.out.print("Enter the size of array: ");
+//         int n = sc.nextInt();
 
-        int[] arr = new int[n];
+//         int[] arr = new int[n];
 
-        // Input array elements
-        System.out.println("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+//         // Input array elements
+//         System.out.println("Enter array elements:");
+//         for (int i = 0; i < n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
 
-        // Move non-zero elements to the front
-        int index = 0;
+//         // Move non-zero elements to the front
+//         int index = 0;
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] != 0) {
-                arr[index] = arr[i];
-                index++;
-            }
-        }
+//         for (int i = 0; i < n; i++) {
+//             if (arr[i] != 0) {
+//                 arr[index] = arr[i];
+//                 index++;
+//             }
+//         }
 
-        // Fill remaining positions with zeros
-        while (index < n) {
-            arr[index] = 0;
-            index++;
-        }
+//         // Fill remaining positions with zeros
+//         while (index < n) {
+//             arr[index] = 0;
+//             index++;
+//         }
 
-        // Display result
-        System.out.println("Array after moving zeros to the end:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
+//         // Display result
+//         System.out.println("Array after moving zeros to the end:");
+//         for (int i = 0; i < n; i++) {
+//             System.out.print(arr[i] + " ");
+//         }
 
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
