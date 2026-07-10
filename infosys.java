@@ -17,9 +17,10 @@
 
 // 2. Valid Anagram
 
+
 import java.util.*;
 class infosys{
-    public boolean isAnagram(String s, String t){
+    public static boolean isAnagram(String s, String t){
         if(s.length()!=t.length()){
             return false;
         }
@@ -32,4 +33,11 @@ class infosys{
         }
         return false;
     }
+    public static void main(String [] args){
+        Scanner sc= new Scanner(System.in);
+        String s=sc.nextLine();
+        String t=sc.nextLine();
+        System.out.print(isAnagram(s,t));
+    }
 }
+
