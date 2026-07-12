@@ -44,21 +44,56 @@
 
 
 // Program to convert seconds into hour, min and second.
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter seconds: ");
+//         int seconds=sc.nextInt();
+
+//         int hr=seconds/3600;
+//         int remSec=seconds%3600;
+
+//         int min=remSec/60;
+//         int sec=remSec%60;
+
+//         System.out.println("Hour: "+hr);
+//         System.out.println("Min: "+min);
+//         System.out.println("Sec: "+sec);
+//     }
+// }
+
+
+// Program to check whether given character is Alphabet, Digit or Symbol.
+
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a character: ");
+//         char ch=sc.next().charAt(0);
+//         if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')){
+//             System.out.print("Alphabet");
+//         }else if(ch>='0'&&ch<='9'){
+//             System.out.print("Digit");
+//         }else{
+//             System.out.print("Symbol");
+//         }
+//     }
+// }
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter seconds: ");
-        int seconds=sc.nextInt();
-
-        int hr=seconds/3600;
-        int remSec=seconds%3600;
-
-        int min=remSec/60;
-        int sec=remSec%60;
-
-        System.out.println("Hour: "+hr);
-        System.out.println("Min: "+min);
-        System.out.println("Sec: "+sec);
+        System.out.print("Enter a character: ");
+        char ch=sc.next().charAt(0);
+        if(Character.isLetter(ch)){
+            System.out.print("Alphabet");
+        }else if(Character.isDigit(ch)){
+            System.out.print("Digit");
+        }else{
+            System.out.print("Symbol");
+        }
     }
 }
