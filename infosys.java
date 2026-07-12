@@ -82,18 +82,40 @@
 //     }
 // }
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a character: ");
+//         char ch=sc.next().charAt(0);
+//         if(Character.isLetter(ch)){
+//             System.out.print("Alphabet");
+//         }else if(Character.isDigit(ch)){
+//             System.out.print("Digit");
+//         }else{
+//             System.out.print("Symbol");
+//         }
+//     }
+// }
+
+
+// Count the no. of digit in a number.
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a character: ");
-        char ch=sc.next().charAt(0);
-        if(Character.isLetter(ch)){
-            System.out.print("Alphabet");
-        }else if(Character.isDigit(ch)){
-            System.out.print("Digit");
+        System.out.print("Enter a no.: ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+        int count=0;
+        if(n==0){
+            count=1;
         }else{
-            System.out.print("Symbol");
+        while(n>0){
+            count++;
+            n=n/10;
+            }
         }
+        System.out.print(count);
     }
 }
