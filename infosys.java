@@ -100,22 +100,49 @@
 
 
 // Count the no. of digit in a number.
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a no.: ");
+//         int n=sc.nextInt();
+//         n=Math.abs(n);
+//         int count=0;
+//         if(n==0){
+//             count=1;
+//         }else{
+//         while(n>0){
+//             count++;
+//             n=n/10;
+//             }
+//         }
+//         System.out.print(count);
+//     }
+// }
+
+
+
+// Program to display all the digits of a number n (one per line).
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a no.: ");
         int n=sc.nextInt();
-        n=Math.abs(n);
-        int count=0;
-        if(n==0){
-            count=1;
-        }else{
-        while(n>0){
-            count++;
-            n=n/10;
-            }
+        int temp=n;
+        int div=1;
+        while(temp>=10){
+            div=div*10;
+            temp=temp/10;
         }
-        System.out.print(count);
+        while(div>0){
+            int dig=n/div;
+            System.out.println(dig);
+            n=n%div;
+            div=div/10;
+        }
     }
 }
+
+
+
