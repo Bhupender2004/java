@@ -123,26 +123,52 @@
 
 
 // Program to display all the digits of a number n (one per line).
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a no.: ");
+//         int n=sc.nextInt();
+//         int temp=n;
+//         int div=1;
+//         while(temp>=10){
+//             div=div*10;
+//             temp=temp/10;
+//         }
+//         while(div>0){
+//             int dig=n/div;
+//             System.out.println(dig);
+//             n=n%div;
+//             div=div/10;
+//         }
+//     }
+// }
+
+
+// Count even and odd digit in a number.
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a no.: ");
-        int n=sc.nextInt();
-        int temp=n;
-        int div=1;
-        while(temp>=10){
-            div=div*10;
-            temp=temp/10;
+        System.out.print("Enter no.: ");
+        int n= sc.nextInt();
+        int evdig=0;
+        int oddig=0;
+        while(n>0){
+            int dig=n%10;
+            if(dig%2==0){
+                evdig++;
+                
+            }else if(dig%2!=0){
+                oddig++;
+                
+            }
+            n/=10;
         }
-        while(div>0){
-            int dig=n/div;
-            System.out.println(dig);
-            n=n%div;
-            div=div/10;
-        }
+        System.out.println("Even digits are: "+evdig);
+        System.out.println("Odd digits are: "+oddig);
     }
 }
-
 
 
