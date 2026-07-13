@@ -314,23 +314,50 @@
 
 
 // Program to check whether a no. is perfect no. or not.
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a no.: ");
+//         int n=sc.nextInt();
+//         int sum=0;
+//         for(int i=1; i<=n/2; i++){
+//             if(n%i==0){
+//                 sum+=i;
+//             }
+
+//         }
+//         if(sum==n){
+//             System.out.print("Perfect no.");
+//         }else{
+//             System.out.print("Not perfect no.");
+//         }
+//     }
+// }
+
+
+// Program to check strong number.
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a no.: ");
         int n=sc.nextInt();
+        int temp=n;
         int sum=0;
-        for(int i=1; i<=n/2; i++){
-            if(n%i==0){
-                sum+=i;
+        while(temp>0){
+            int dig=temp%10;
+            int fact=1;
+            for(int i=1; i<=dig; i++){
+                fact=fact*i;
             }
-
+            sum+=fact;
+            temp=temp/10;
         }
         if(sum==n){
-            System.out.print("Perfect no.");
+            System.out.print("Strong no.");
         }else{
-            System.out.print("Not perfect no.");
+            System.out.print("Not strong no.");
         }
     }
 }
