@@ -202,20 +202,48 @@
 
 // Program to find sum of first and last digit of a number n.
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a number: ");
+//         int n=sc.nextInt();
+//         int temp=n;
+//         int div=1;
+//         while(temp>=10){
+//             div=div*10;
+//             temp=temp/10;
+//         }
+//         int firstdig=n/div;
+//         int lastdig=n%10;
+//         System.out.print(firstdig+lastdig);
+//     }
+// }
+
+
+// Program to display the first n prime number.
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int n=sc.nextInt();
-        int temp=n;
-        int div=1;
-        while(temp>=10){
-            div=div*10;
-            temp=temp/10;
+        int count=0;
+        int num=2;
+        while(count<n){
+            boolean isPrime=true;
+            for(int i=2; i<num; i++){
+                if(num%i==0){
+                    isPrime=false;
+                    break;
+                }
+            }
+            if(isPrime){
+                System.out.println(num);
+                count++;
+            }
+            num++;
         }
-        int firstdig=n/div;
-        int lastdig=n%10;
-        System.out.print(firstdig+lastdig);
     }
 }
