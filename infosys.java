@@ -147,28 +147,54 @@
 
 // Count even and odd digit in a number.
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter no.: ");
+//         int n= sc.nextInt();
+//         int evdig=0;
+//         int oddig=0;
+//         while(n>0){
+//             int dig=n%10;
+//             if(dig%2==0){
+//                 evdig++;
+                
+//             }else if(dig%2!=0){
+//                 oddig++;
+                
+//             }
+//             n/=10;
+//         }
+//         System.out.println("Even digits are: "+evdig);
+//         System.out.println("Odd digits are: "+oddig);
+//     }
+// }
+
+
+// Program to replace all zeros in a number n with digit 5.
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter no.: ");
-        int n= sc.nextInt();
-        int evdig=0;
-        int oddig=0;
+        System.out.print("Enter number: ");
+        int n=sc.nextInt();
+        int rev=0;
+        int newNum=rev;
         while(n>0){
             int dig=n%10;
-            if(dig%2==0){
-                evdig++;
-                
-            }else if(dig%2!=0){
-                oddig++;
-                
+            if(dig==0){
+                dig=5;
             }
-            n/=10;
+            rev=(rev*10)+dig;
+            n=n/10;
         }
-        System.out.println("Even digits are: "+evdig);
-        System.out.println("Odd digits are: "+oddig);
+        while(rev>0){
+            int dig=rev%10;
+            newNum=(newNum*10)+dig;
+            rev=rev/10;
+        }
+        System.out.print(newNum);
     }
 }
-
-
