@@ -174,27 +174,48 @@
 
 // Program to replace all zeros in a number n with digit 5.
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         int n=sc.nextInt();
+//         int rev=0;
+//         int newNum=rev;
+//         while(n>0){
+//             int dig=n%10;
+//             if(dig==0){
+//                 dig=5;
+//             }
+//             rev=(rev*10)+dig;
+//             n=n/10;
+//         }
+//         while(rev>0){
+//             int dig=rev%10;
+//             newNum=(newNum*10)+dig;
+//             rev=rev/10;
+//         }
+//         System.out.print(newNum);
+//     }
+// }
+
+
+// Program to find sum of first and last digit of a number n.
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number: ");
+        System.out.print("Enter a number: ");
         int n=sc.nextInt();
-        int rev=0;
-        int newNum=rev;
-        while(n>0){
-            int dig=n%10;
-            if(dig==0){
-                dig=5;
-            }
-            rev=(rev*10)+dig;
-            n=n/10;
+        int temp=n;
+        int div=1;
+        while(temp>=10){
+            div=div*10;
+            temp=temp/10;
         }
-        while(rev>0){
-            int dig=rev%10;
-            newNum=(newNum*10)+dig;
-            rev=rev/10;
-        }
-        System.out.print(newNum);
+        int firstdig=n/div;
+        int lastdig=n%10;
+        System.out.print(firstdig+lastdig);
     }
 }
