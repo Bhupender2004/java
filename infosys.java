@@ -223,27 +223,114 @@
 
 // Program to display the first n prime number.
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a number: ");
+//         int n=sc.nextInt();
+//         int count=0;
+//         int num=2;
+//         while(count<n){
+//             boolean isPrime=true;
+//             for(int i=2; i<num; i++){
+//                 if(num%i==0){
+//                     isPrime=false;
+//                     break;
+//                 }
+//             }
+//             if(isPrime){
+//                 System.out.println(num);
+//                 count++;
+//             }
+//             num++;
+//         }
+//     }
+// }
+
+
+// Program to check if a no. is armstrong or not.
+
+// import java.util.*;
+// class Main{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a no.: ");
+//         int n=sc.nextInt();
+//         int org=n;
+//         int temp=n;
+//         int count=0;
+//         int sum=0;
+//         while(temp>0){
+//             count++;
+//             temp=temp/10;
+//         }
+//         temp=org;
+//         while(temp>0){
+//             int dig=temp%10;
+//             sum+=(int)Math.pow(dig, count);
+//             temp=temp/10;
+//         }
+//         System.out.print(sum);
+//         if(sum==org){
+//             System.out.print("Armstrong");
+//         }else{
+//             System.out.print("Not armstrong");
+//         }
+//     }
+// }
+
+
+
+// Program to print Armstrong no.
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a number: ");
+//         int n=sc.nextInt();
+//         for(int i=1; i<=n; i++){
+//             int temp=i;
+//             int org=i;
+//             int count=0;
+//             int sum=0;
+
+//             while(temp>0){
+//                 count++;
+//                 temp=temp/10;
+//             }
+//             temp=org;
+//             while(temp>0){
+//                 int dig=temp%10;
+//                 sum+=(int)Math.pow(dig, count);
+//                 temp=temp/10;
+//             }
+//             if(sum==org){
+//                 System.out.println(i);
+//             }
+//         }
+//     }
+// }
+
+
+// Program to check whether a no. is perfect no. or not.
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a no.: ");
         int n=sc.nextInt();
-        int count=0;
-        int num=2;
-        while(count<n){
-            boolean isPrime=true;
-            for(int i=2; i<num; i++){
-                if(num%i==0){
-                    isPrime=false;
-                    break;
-                }
+        int sum=0;
+        for(int i=1; i<=n/2; i++){
+            if(n%i==0){
+                sum+=i;
             }
-            if(isPrime){
-                System.out.println(num);
-                count++;
-            }
-            num++;
+
+        }
+        if(sum==n){
+            System.out.print("Perfect no.");
+        }else{
+            System.out.print("Not perfect no.");
         }
     }
 }
