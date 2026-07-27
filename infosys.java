@@ -337,27 +337,54 @@
 
 
 // Program to check strong number.
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a no.: ");
+//         int n=sc.nextInt();
+//         int temp=n;
+//         int sum=0;
+//         while(temp>0){
+//             int dig=temp%10;
+//             int fact=1;
+//             for(int i=1; i<=dig; i++){
+//                 fact=fact*i;
+//             }
+//             sum+=fact;
+//             temp=temp/10;
+//         }
+//         if(sum==n){
+//             System.out.print("Strong no.");
+//         }else{
+//             System.out.print("Not strong no.");
+//         }
+//     }
+// }
+
+// Automorphic number
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a no.: ");
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number: ");
         int n=sc.nextInt();
+        int sq=n*n;
         int temp=n;
-        int sum=0;
+        boolean isAuto=true;
         while(temp>0){
-            int dig=temp%10;
-            int fact=1;
-            for(int i=1; i<=dig; i++){
-                fact=fact*i;
+            if(sq%10!=temp%10){
+                isAuto=false;
+                break;
             }
-            sum+=fact;
-            temp=temp/10;
+            temp/=10;
+            sq/=10;
         }
-        if(sum==n){
-            System.out.print("Strong no.");
+        if(isAuto){
+            System.out.print("Automorphic");
         }else{
-            System.out.print("Not strong no.");
+            System.out.print("Not automorphic");
         }
     }
 }
