@@ -364,27 +364,70 @@
 
 // Automorphic number
 
-import java.util.*;
-class infosys{
-    public static void main(String [] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int n=sc.nextInt();
-        int sq=n*n;
-        int temp=n;
-        boolean isAuto=true;
-        while(temp>0){
-            if(sq%10!=temp%10){
-                isAuto=false;
-                break;
-            }
-            temp/=10;
-            sq/=10;
-        }
-        if(isAuto){
-            System.out.print("Automorphic");
-        }else{
-            System.out.print("Not automorphic");
-        }
-    }
-}
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc=new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         int n=sc.nextInt();
+//         int sq=n*n;
+//         int temp=n;
+//         boolean isAuto=true;
+//         while(temp>0){
+//             if(sq%10!=temp%10){
+//                 isAuto=false;
+//                 break;
+//             }
+//             temp/=10;
+//             sq/=10;
+//         }
+//         if(isAuto){
+//             System.out.print("Automorphic");
+//         }else{
+//             System.out.print("Not automorphic");
+//         }
+//     }
+// }
+
+
+// GCD of two nos.
+
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a: ");
+//         int a=sc.nextInt();
+//         System.out.print("Enter b: ");
+//         int b=sc.nextInt();
+//         while(b!=0){
+//             int temp=b;
+//             b=a%b;
+//             a=temp;
+//         }
+//         System.out.print(a);
+//     }
+// }
+
+
+// LCM of two nos.
+
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a: ");
+//         int a=sc.nextInt();
+//         System.out.print("Enter b: ");
+//         int b=sc.nextInt();
+//         int x=a; int y=b;
+//         while(y!=0){
+//             int temp=y;
+//             y=x%y;
+//             x=temp;
+//         }
+//         int hcf=x;
+//         int lcm=(a*b)/hcf;
+//         System.out.print("LCM is: "+lcm);
+//     }
+// }
