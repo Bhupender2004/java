@@ -472,3 +472,24 @@
 //         printFib(a,b,n-2);
 //     }
 // }
+
+
+// Sum of fibonacci series upto n terms.
+import java.util.*;
+class infosys{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n=sc.nextInt();
+        int a=0; int b=1;
+        int sum=0;
+        for(int i=1; i<=n; i++){
+            sum=sum+a;
+            int next=a+b;
+            a=b;
+            b=next;
+        }
+        System.out.print("Sum of "+n+" term of fibo is: "+sum);
+        sc.close();
+    }
+}
