@@ -496,13 +496,46 @@
 
 
 // Sum of square of n terms.
+// import java.util.*;
+// class infosys{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter n: ");
+//         int n=sc.nextInt();
+//         int sum=(n*(n+1)*((2*n)+1))/6;
+//         System.out.print(sum);
+//     }
+// }
+
+
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc=new Scanner(System.in);
+//         System.out.print("Enter n: ");
+//         int n=sc.nextInt();
+//         int sum=0;
+//         for(int i=1; i<=n; i++){
+//             sum+=i*i;
+//         }
+//         System.out.print(sum);
+//     }
+// }
+
+
+// Power of x raised to y without any inbuilt function.
 import java.util.*;
-class infosys{
-    public static void main(String[] args) {
+class Main{
+    public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter n: ");
-        int n=sc.nextInt();
-        int sum=(n*(n+1)*((2*n)+1))/6;
-        System.out.print(sum);
+        System.out.print("Enter x: ");
+        int x=sc.nextInt();
+        System.out.print("Enter y: ");
+        int y=sc.nextInt();
+        int power=1;
+        for(int i=1; i<=y; i++){
+            power*=x;
+        }
+        System.out.print(power);
     }
 }
