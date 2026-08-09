@@ -545,19 +545,44 @@
 // 2 3
 // 4 5 6... print this pattern.
 
+// import java.util.*;
+// class infosys{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter n: ");
+//         int n=sc.nextInt();
+//         int count=1;
+//         for(int i=1; i<=n; i++){
+//             for(int j=1; j<=i; j++){
+//                 System.out.print(count+" ");
+//                 count++;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+// To print pascal's triangle.
+
 import java.util.*;
 class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
         int n=sc.nextInt();
-        int count=1;
-        for(int i=1; i<=n; i++){
-            for(int j=1; j<=i; j++){
-                System.out.print(count+" ");
-                count++;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n-i; j++){
+                System.out.print(" ");
+            }
+            int num=1;
+            for(int j=0; j<=i; j++){
+                System.out.print(num+" ");
+                num=num*(i-j)/(j+1);
             }
             System.out.println();
+
         }
     }
 }
