@@ -524,18 +524,40 @@
 
 
 // Power of x raised to y without any inbuilt function.
+// import java.util.*;
+// class Main{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter x: ");
+//         int x=sc.nextInt();
+//         System.out.print("Enter y: ");
+//         int y=sc.nextInt();
+//         int power=1;
+//         for(int i=1; i<=y; i++){
+//             power*=x;
+//         }
+//         System.out.print(power);
+//     }
+// }
+
+
+// 1
+// 2 3
+// 4 5 6... print this pattern.
+
 import java.util.*;
-class Main{
+class infosys{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter x: ");
-        int x=sc.nextInt();
-        System.out.print("Enter y: ");
-        int y=sc.nextInt();
-        int power=1;
-        for(int i=1; i<=y; i++){
-            power*=x;
+        System.out.print("Enter n: ");
+        int n=sc.nextInt();
+        int count=1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(count+" ");
+                count++;
+            }
+            System.out.println();
         }
-        System.out.print(power);
     }
 }
