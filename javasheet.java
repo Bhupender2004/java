@@ -56,17 +56,46 @@
 
 
 // Reverse the string.
+// import java.util.*;
+// class javasheet{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter string: ");
+//         String s=sc.nextLine();
+//         String rev="";
+//         for(int i=s.length()-1; i>=0; i--){
+//             rev+=s.charAt(i);
+//         }
+//         System.out.print("Reversed string: "+rev);
+//     }
+// }
+
+
+// Program to check whether a string is Palindrome.
 import java.util.*;
 class javasheet{
+    public static boolean isPalindrome(String s){
+        int left=0;
+        int right=s.length()-1;
+        while(left<right){
+            if(s.charAt(left)!=s.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter string: ");
         String s=sc.nextLine();
-        String rev="";
-        for(int i=s.length()-1; i>=0; i--){
-            rev+=s.charAt(i);
+        if(isPalindrome(s)){
+            System.out.print("String is Palindrome.");
+        }else{
+            System.out.print("String is not palindrome.");
         }
-        System.out.print("Reversed string: "+rev);
     }
 }
 
