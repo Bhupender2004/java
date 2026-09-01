@@ -96,6 +96,7 @@ class javasheet{
         }else{
             System.out.print("String is not palindrome.");
         }
+        sc.close();
     }
 }
 
