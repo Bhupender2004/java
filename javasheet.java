@@ -72,31 +72,59 @@
 
 
 // Program to check whether a string is Palindrome.
-import java.util.*;
-class javasheet{
-    public static boolean isPalindrome(String s){
-        int left=0;
-        int right=s.length()-1;
-        while(left<right){
-            if(s.charAt(left)!=s.charAt(right)){
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-    }
+// import java.util.*;
+// class javasheet{
+//     public static boolean isPalindrome(String s){
+//         int left=0;
+//         int right=s.length()-1;
+//         while(left<right){
+//             if(s.charAt(left)!=s.charAt(right)){
+//                 return false;
+//             }
+//             left++;
+//             right--;
+//         }
+//         return true;
+//     }
 
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter string: ");
+//         String s=sc.nextLine();
+//         if(isPalindrome(s)){
+//             System.out.print("String is Palindrome.");
+//         }else{
+//             System.out.print("String is not palindrome.");
+//         }
+//         sc.close();
+//     }
+// }
+
+
+
+// Program to convert string to uppercase and lowercase without using inbuilt function.
+import java.util.*;
+public class javasheet{
     public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         System.out.print("Enter string: ");
         String s=sc.nextLine();
-        if(isPalindrome(s)){
-            System.out.print("String is Palindrome.");
-        }else{
-            System.out.print("String is not palindrome.");
+        String upper="";
+        String lower="";
+        for(int i=0; i<s.length(); i++){
+            char ch=s.charAt(i);
+            if(ch>='a'&&ch<='z'){
+                upper+=(char)(ch-32);
+            }else{
+                upper+=ch;
+            }
+            if(ch>='A'&&ch<='Z'){
+                lower+=(char)(ch+32);
+            }else{
+                lower+=ch;
+            }
         }
-        sc.close();
+        System.out.println("Upper case: "+upper);
+        System.out.print("Lower case: "+lower);
     }
 }
-
