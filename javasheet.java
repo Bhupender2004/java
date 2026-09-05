@@ -103,28 +103,46 @@
 
 
 // Program to convert string to uppercase and lowercase without using inbuilt function.
+// import java.util.*;
+// public class javasheet{
+//     public static void main(String [] args){
+//         Scanner sc=new Scanner(System.in);
+//         System.out.print("Enter string: ");
+//         String s=sc.nextLine();
+//         String upper="";
+//         String lower="";
+//         for(int i=0; i<s.length(); i++){
+//             char ch=s.charAt(i);
+//             if(ch>='a'&&ch<='z'){
+//                 upper+=(char)(ch-32);
+//             }else{
+//                 upper+=ch;
+//             }
+//             if(ch>='A'&&ch<='Z'){
+//                 lower+=(char)(ch+32);
+//             }else{
+//                 lower+=ch;
+//             }
+//         }
+//         System.out.println("Upper case: "+upper);
+//         System.out.print("Lower case: "+lower);
+//     }
+// }
+
+
+// Program to count the frequency of each character in a string.
 import java.util.*;
-public class javasheet{
+class javasheet{
     public static void main(String [] args){
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter string: ");
         String s=sc.nextLine();
-        String upper="";
-        String lower="";
-        for(int i=0; i<s.length(); i++){
-            char ch=s.charAt(i);
-            if(ch>='a'&&ch<='z'){
-                upper+=(char)(ch-32);
-            }else{
-                upper+=ch;
-            }
-            if(ch>='A'&&ch<='Z'){
-                lower+=(char)(ch+32);
-            }else{
-                lower+=ch;
-            }
+        HashMap<Character, Integer> freq=new HashMap<>();
+        for(char ch:s.toCharArray()){
+            freq.put(ch, freq.getOrDefault(ch, 0)+1);
         }
-        System.out.println("Upper case: "+upper);
-        System.out.print("Lower case: "+lower);
+        for(char ch:freq.keySet()){
+            System.out.println(ch+" : "+freq.get(ch));
+        }
     }
 }
