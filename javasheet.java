@@ -146,3 +146,17 @@
 //         }
 //     }
 // }
+
+
+
+// Program to remove all the space from the string.
+import java.util.*;
+class javasheet{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s=sc.nextLine();
+        String res=s.replace(" ", "");
+        System.out.print(res);
+    }
+}
