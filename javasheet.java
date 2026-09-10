@@ -150,13 +150,34 @@
 
 
 // Program to remove all the space from the string.
+// import java.util.*;
+// class javasheet{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter string: ");
+//         String s=sc.nextLine();
+//         String res=s.replace(" ", "");
+//         System.out.print(res);
+//     }
+// }
+
+// Program to check whether two strings are anagrams of each other.
 import java.util.*;
 class javasheet{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter string: ");
-        String s=sc.nextLine();
-        String res=s.replace(" ", "");
-        System.out.print(res);
+        System.out.print("Enter string1: ");
+        String s1=sc.nextLine();
+        System.out.print("Enter string2: ");
+        String s2=sc.nextLine();
+        char [] charArray1=s1.toCharArray();
+        char [] charArray2=s2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+        if(Arrays.equals(charArray1, charArray2)){
+            System.out.print("Strings are anagram.");
+        }else{
+            System.out.print("Strings are not anagram.");
+        }
     }
 }
