@@ -162,22 +162,52 @@
 // }
 
 // Program to check whether two strings are anagrams of each other.
+// import java.util.*;
+// class javasheet{
+//     public static void main(String [] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter string1: ");
+//         String s1=sc.nextLine();
+//         System.out.print("Enter string2: ");
+//         String s2=sc.nextLine();
+//         char [] charArray1=s1.toCharArray();
+//         char [] charArray2=s2.toCharArray();
+//         Arrays.sort(charArray1);
+//         Arrays.sort(charArray2);
+//         if(Arrays.equals(charArray1, charArray2)){
+//             System.out.print("Strings are anagram.");
+//         }else{
+//             System.out.print("Strings are not anagram.");
+//         }
+//     }
+// }
+
+
+// Program to find first non-repeating character.
 import java.util.*;
 class javasheet{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter string1: ");
-        String s1=sc.nextLine();
-        System.out.print("Enter string2: ");
-        String s2=sc.nextLine();
-        char [] charArray1=s1.toCharArray();
-        char [] charArray2=s2.toCharArray();
-        Arrays.sort(charArray1);
-        Arrays.sort(charArray2);
-        if(Arrays.equals(charArray1, charArray2)){
-            System.out.print("Strings are anagram.");
-        }else{
-            System.out.print("Strings are not anagram.");
+        System.out.print("Enter string: ");
+        String str=sc.nextLine();
+        boolean found=false;
+        for(int i=0; i<str.length(); i++){
+            char ch=str.charAt(i);
+            int count=0;
+
+            for(int j=0; j<str.length(); j++){
+                if(str.charAt(j)==ch){
+                    count++;
+                }
+            }
+            if(count==1){
+                System.out.print("First non-repeating character is: "+ch);
+                found=true;
+                break;
+            }
+        }
+        if(!found){
+            System.out.print("No non-repeating character found.");
         }
     }
 }
