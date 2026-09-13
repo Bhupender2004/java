@@ -215,23 +215,40 @@
 
 // OR 
 
-import java.util.*;
+// import java.util.*;
 
-public class javasheet {
-    public static void main(String[] args) {
+// public class javasheet {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter string: ");
+//         String str=sc.nextLine();
+//         HashMap<Character, Integer> map = new HashMap<>();
+//         for (char ch : str.toCharArray()) {
+//             map.put(ch, map.getOrDefault(ch, 0) + 1);
+//         }
+//         for (char ch : str.toCharArray()) {
+//             if (map.get(ch) == 1) {
+//                 System.out.println("First non-repeating character: " + ch);
+//                 return;
+//             }
+//         }
+//         System.out.println("No non-repeating character found");
+//     }
+// }
+
+
+// Pprogram to replace all occurrences of a character with another character in a string.
+import java.util.*;
+class javasheet{
+    public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter string: ");
         String str=sc.nextLine();
-        HashMap<Character, Integer> map = new HashMap<>();
-        for (char ch : str.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-        }
-        for (char ch : str.toCharArray()) {
-            if (map.get(ch) == 1) {
-                System.out.println("First non-repeating character: " + ch);
-                return;
-            }
-        }
-        System.out.println("No non-repeating character found");
+        System.out.print("Enter character to replace: ");
+        char oldchar=sc.next().charAt(0);
+        System.out.print("Enter new character: ");
+        char newchar=sc.next().charAt(0);
+        String result=str.replace(oldchar, newchar);
+        System.out.print("Updated string: "+result);
     }
 }
