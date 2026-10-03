@@ -255,25 +255,72 @@
 
 
 // Program to toggle to case of each character in a string.
+// import java.util.*;
+// class javasheet {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a string: ");
+//         String str = sc.nextLine();
+//         String result = "";
+//         for (int i = 0; i < str.length(); i++) {
+//             char ch = str.charAt(i);
+//             if (ch >= 'A' && ch <= 'Z') {
+//                 result += (char)(ch + 32);
+//             }
+//             else if (ch >= 'a' && ch <= 'z') {
+//                 result += (char)(ch - 32);
+//             }
+//             else {
+//                 result += ch;
+//             }
+//         }
+//         System.out.println("Toggled string: " + result);
+//     }
+// }
+
+
+
+// Arrays/Lists
+
+// Program to read n elements into an array and print them.
+// import java.util.*;
+// class javasheet{
+//   public static void main(String [] args){
+//     Scanner sc = new Scanner(System.in);
+//     System.out.print("Enter n: ");
+//     int n=sc.nextInt();
+//     int arr[]=new int[n];
+//     System.out.print("Enter array elements: ");
+//     for(int i=0; i<n; i++){
+//       arr[i]=sc.nextInt();
+//     }
+//     System.out.print("Elements are: ");
+//     for(int i=0; i<n; i++){
+//       System.out.print(arr[i]+" ");
+//     }
+//   }
+// }
+
+
+// Program to find the sum and average of all elements in an array.
 import java.util.*;
-class javasheet {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a string: ");
-        String str = sc.nextLine();
-        String result = "";
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (ch >= 'A' && ch <= 'Z') {
-                result += (char)(ch + 32);
-            }
-            else if (ch >= 'a' && ch <= 'z') {
-                result += (char)(ch - 32);
-            }
-            else {
-                result += ch;
-            }
-        }
-        System.out.println("Toggled string: " + result);
+class javasheet{
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter n: ");
+    int n=sc.nextInt();
+    int arr[]=new int[n];
+    int sum=0;
+    int avg=0;
+    System.out.print("Enter array elements: ");
+    for(int i=0; i<n; i++){
+      arr[i]=sc.nextInt();
     }
+    for(int i=0; i<n; i++){
+      sum+=arr[i];
+    }
+    System.out.println("Sum is: "+sum);
+    avg=sum/n;
+    System.out.println("Average is : "+avg);
+  }
 }
